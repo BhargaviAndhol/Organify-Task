@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Organify — Fresh Organic Store</title>
+
+  <!-- Google Font (pick one) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar bg-light py-1 border-bottom">
+    <div class="container d-flex justify-content-between small">
+      <div><a href="signup.html" style="text-decoration: none; color: inherit; cursor: pointer;">My Account</a></div>
+      
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.jpg" alt="logo" class="me-2 logo">
+        <span class="brand-name">Organify</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item ms-3"><a class="btn btn-outline-success" href="#">Contact</a></li>
+        </ul>
+        <form class="d-flex ms-3" onsubmit="event.preventDefault(); searchProducts();">
+  <input class="form-control me-2" type="search" id="searchInput" placeholder="Search products..." aria-label="Search">
+  <button class="btn btn-success" type="button" onclick="searchProducts()">Search</button>
+</form>
+
+
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-5 mb-3">Fresh organic produce, delivered to your door</h1>
+          <p class="lead mb-4">Locally grown fruits, vegetables and pantry staples — organic, fresh and affordable.</p>
+          <div class="d-flex gap-2">
+            <a href="#products" class="btn btn-success btn-lg">Shop Now</a>
+            <a href="#about" class="btn btn-outline-secondary btn-lg">Learn More</a>
+          </div>
+          <ul class="mt-4 list-unstyled d-flex gap-3">
+            <li><strong>Free delivery</strong></li>
+            <li><strong>100% Organic</strong></li>
+            <li><strong>Secure payment</strong></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="images/hero.jpg" alt="fresh produce" class="img-fluid hero-img">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="mb-4">Shop by Category</h3>
+      <div class="row g-3">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card category-card p-3 text-center">
+            <img src="images/cat1.jpg" alt="" class="img-fluid mb-2">
+            <h6 class="mb-0">Fresh Fruits</h6>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card category-card p-3 text-center">
+            <img src="images/cat2.jpg" alt="" class="img-fluid mb-2">
+            <h6 class="mb-0">Vegetables</h6>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card category-card p-3 text-center">
+            <img src="images/cat3.jpg" alt="" class="img-fluid mb-2">
+            <h6 class="mb-0">Herbs & Spices</h6>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card category-card p-3 text-center">
+            <img src="images/cat4.jpg" alt="" class="img-fluid mb-2">
+            <h6 class="mb-0">Dairy & Eggs</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <h3 class="mb-4">Featured Products</h3>
+      <div class="row g-4">
+        <!-- product card -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="images/prod1.jpg" class="card-img-top" alt="product">
+            <div class="card-body">
+              <h6 class="card-title">Organic Apples</h6>
+              <p class="card-text small">1kg - Freshly picked</p>
+            </div>
+            <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+              <div class="price">₹120</div>
+              <button class="btn btn-sm btn-success">Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- duplicate product cards (copy & update images/text) -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="images/prod2.jpg" class="card-img-top" alt="product">
+            <div class="card-body">
+              <h6 class="card-title">Green Spinach</h6>
+              <p class="card-text small">250g - Fresh leaves</p>
+            </div>
+            <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+              <div class="price">₹40</div>
+              <button class="btn btn-sm btn-success">Add</button>
+            </div>
+          </div>
+        </div>
+
+        
+         <div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod3.jpg" class="card-img-top" alt="product">
+    <div class="card-body">
+      <h6 class="card-title">Cow Milk</h6>
+      <p class="card-text small">1L - Fresh & Pure</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹60</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod4.jpg" class="card-img-top" alt="product">
+    <div class="card-body">
+      <h6 class="card-title">Farm Fresh Eggs</h6>
+      <p class="card-text small">Pack of 6 - Organic</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹90</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod5.jpg" class="card-img-top" alt="product">
+    <div class="card-body">
+      <h6 class="card-title">Fresh Carrots</h6>
+      <p class="card-text small">500g - Sweet & Crunchy</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹50</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod6.jpg" class="card-img-top" alt="product">
+    <div class="card-body">
+      <h6 class="card-title">Raw Organic Honey</h6>
+      <p class="card-text small">500g - Natural sweetness</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹250</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Bananas -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod7.jpg" class="card-img-top" alt="Bananas">
+    <div class="card-body">
+      <h6 class="card-title">Bananas</h6>
+      <p class="card-text small">1 Dozen - Naturally ripened</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹70</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Papaya -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod8.jpg" class="card-img-top" alt="Papaya">
+    <div class="card-body">
+      <h6 class="card-title">Fresh Papaya</h6>
+      <p class="card-text small">1kg - Sweet & juicy</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹90</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tomatoes -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod9.jpg" class="card-img-top" alt="Tomatoes">
+    <div class="card-body">
+      <h6 class="card-title">Organic Tomatoes</h6>
+      <p class="card-text small">1kg - Farm fresh</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹55</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Broccoli -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod10.jpg" class="card-img-top" alt="Broccoli">
+    <div class="card-body">
+      <h6 class="card-title">Fresh Broccoli</h6>
+      <p class="card-text small">500g - Green & crunchy</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹80</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paneer -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod11.jpg" class="card-img-top" alt="Paneer">
+    <div class="card-body">
+      <h6 class="card-title">Homemade Paneer</h6>
+      <p class="card-text small">200g - Soft & fresh</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹110</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fresh Juice -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod12.jpg" class="card-img-top" alt="Fresh Juice">
+    <div class="card-body">
+      <h6 class="card-title">Cold Pressed Juice</h6>
+      <p class="card-text small">300ml - No added sugar</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹75</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Brown Rice -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod13.jpg" class="card-img-top" alt="Brown Rice">
+    <div class="card-body">
+      <h6 class="card-title">Organic Brown Rice</h6>
+      <p class="card-text small">1kg - High fiber</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹120</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Wheat Flour -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod14.jpg" class="card-img-top" alt="Wheat Flour">
+    <div class="card-body">
+      <h6 class="card-title">Whole Wheat Flour</h6>
+      <p class="card-text small">1kg - Stone ground</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹90</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Coconut Oil -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod15.jpg" class="card-img-top" alt="Coconut Oil">
+    <div class="card-body">
+      <h6 class="card-title">Pure Coconut Oil</h6>
+      <p class="card-text small">500ml - Cold pressed</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹300</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- Organic Turmeric -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card h-100">
+    <img src="images/prod16.jpg" class="card-img-top" alt="Turmeric">
+    <div class="card-body">
+      <h6 class="card-title">Organic Turmeric Powder</h6>
+      <p class="card-text small">250g - High curcumin</p>
+    </div>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <div class="price">₹130</div>
+      <button class="btn btn-sm btn-success">Add</button>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5 bg-success text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h3>About Organify</h3>
+          <p>We partner with local farms to bring fresh, organic produce to your table. Sustainable farming and good prices.</p>
+          <a href="#" class="btn btn-outline-light">Our Story</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="images/about.jpg" alt="about" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h3 class="mb-4">What customers say</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-3 testimonial-card">
+            <p class="mb-1">“Fresh vegetables every week. Great service.”</p>
+            <small class="text-muted">— Priya</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 testimonial-card">
+            <p class="mb-1">“Organic fruits taste so much better!”</p>
+            <small class="text-muted">— Rohit</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 testimonial-card">
+            <p class="mb-1">“Good quality and quick delivery.”</p>
+            <small class="text-muted">— Asha</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <h5>Organify</h5>
+        <p class="small">Fresh organic groceries — straight from farms.</p>
+      </div>
+      <div class="text-end small">
+        <div>Contact: +91 98765 43210</div>
+        <div>Email: support@Organify.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

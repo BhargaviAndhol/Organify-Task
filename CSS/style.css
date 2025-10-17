@@ -1,0 +1,35 @@
+:root{
+  --brand:#2f7a3e;       /* main brand color — change to your palette */
+  --accent:#a3d39c;
+  --muted:#6b6b6b;
+  --radius:12px;
+  --maxw:1200px;
+  font-family: 'Inter', sans-serif;
+}
+
+body{background:#fff; color:#222;}
+
+/* Logo */
+.logo{width:44px; height:44px; object-fit:cover; border-radius:8px;}
+.brand-name{font-weight:700; color:var(--brand);}
+
+/* Hero */
+.hero-section{background:#f8fff4;}
+.hero-img{max-width:650px; border-radius:16px; box-shadow:0 8px 30px rgba(47,122,62,0.12);}
+
+/* Category & product cards */
+.category-card{border:0; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.04);}
+.product-card{border:0; border-radius:12px; overflow:hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.05);}
+.product-card img{height:170px; object-fit:cover;}
+
+/* Footer */
+footer{background:#0f1720; color:#dbeaf0}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .hero-img{margin-top:1.5rem; max-width:320px;}
+  .brand-name{font-size:1rem;}
+}
+
+/* small details */
+.price{font-weight:700;}
