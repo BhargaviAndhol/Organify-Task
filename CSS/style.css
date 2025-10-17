@@ -20,7 +20,7 @@ body{background:#fff; color:#222;}
 }
 
 @media screen and (max-width: 768px) {
-  .logo { width: 32px; } /* smaller on mobile */
+  .logo { width: 2px; } /* smaller on mobile */
   .brand-name { font-size: 1rem; } /* scale brand text */
 }
 
