@@ -1,13 +1,4 @@
-// small helper: close navbar on link click (on mobile)
-document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link){
-  link.addEventListener('click', function(){
-    var bsCollapse = document.querySelector('#mainNav');
-    if (bsCollapse.classList.contains('show')) {
-      var bs = bootstrap.Collapse.getInstance(bsCollapse);
-      if (bs) bs.hide();
-    }
-  });
-});
+
 
 // ---------------------------
 // 🔍 Product Search Function
