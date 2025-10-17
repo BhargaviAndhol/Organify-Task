@@ -10,7 +10,7 @@
 body{background:#fff; color:#222;}
 
 /* Logo */
-.logo{width:44px; height:44px; object-fit:cover; border-radius:8px;}
+.logo{width:44px; height:auto; display: inline-block; object-fit:cover; border-radius:8px;}
 .brand-name{font-weight:700; color:var(--brand);}
 
 /* Hero */
